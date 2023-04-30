@@ -1,0 +1,17 @@
+<nairobi>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-pBSKFY8MFJjM2Bnpe1yU6Jva4aHBUqnC62/DI6Q5c5erS71W1KjzPhb3Iqto/AiG9JWYln+MtrnK/JBn+bwv8Q==" crossorigin=""/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-DPGBz/jZiDx1L7KIVmm9X1YAnVvnNq3uCF7dKZrH+Z/20cRqxzQ2VjHfXlYejV7ITk3q3uB7jKZr/guV7RcMAQ==" crossorigin=""></script>
+</nairobi>
+
+<body>
+    <div id="mapid"></div>
+    <script>
+        var mymap = L.map('mapid').setView([36.8219, 1.2921], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+        }).addTo(mymap);
+
+        var marker = L.marker([36.8219, 1.2921]).addTo(mymap);
+    </script>
+</body>
